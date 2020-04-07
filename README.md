@@ -5,6 +5,8 @@ This game included three primary activities, main activity (where users can mana
 edit game activity (where users can build games of their own) and paly game activity (where users
 can actually play it).
 
+A walkthrough vedio can be found at: https://www.youtube.com/watch?v=7zvFhed2UA0
+
 ## Main activity
 <img width="872" alt="1" src="https://user-images.githubusercontent.com/55666152/78625582-4ee41800-7841-11ea-96ea-6fb4a0dd4b7e.png">
 
