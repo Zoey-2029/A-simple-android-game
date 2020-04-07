@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme.DialogActivity" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/floating_edit_shape_window</item>
+    </style>
+
+    <style name="Theme.ScriptDialogActivity" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/floating_edit_shape_script_window</item>
+    </style>
+
+    <style name="Theme.PageDialogActivity" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/floating_edit_page_window</item>
+    </style>
+
+    <style name="AlertDialogMainActivity" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">#012846</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/cabin_sketch_bold</item>
+        <item name="android:background">#F0F6F0</item>
+        <item name="android:radius">3sp</item>
+    </style>
+</resources>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="600dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Trigger" />
+
+        <Spinner
+            android:id="@+id/trigger_spinner"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Shape" />
+
+        <Spinner
+            android:id="@+id/shape_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Action" />
+
+        <Spinner
+            android:id="@+id/action_spinner"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Object" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/object_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/object_importer"
+                android:layout_width="wrap_content"
+                android:layout_height="35sp"
+                android:gravity="center"
+                android:onClick="importMusic"
+                android:text="Import"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="addNewScript"
+            android:text="ADD" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="clearAllEditShapeScript"
+            android:text="Clear all" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="backEditShapeScript"
+            android:text="CANCEL" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="100sp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="Script" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff8566"
+                android:gravity="center"
+                android:text="Missing\n Shape" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:background="#99b3ff"
+                android:gravity="center"
+                android:text="Show/Hide\n Mismatch" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:background="#b3e6b3"
+                android:gravity="center"
+                android:text="On Click\n Multiple Play" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:background="#ffcc80"
+                android:gravity="center"
+                android:text="On Enter\n Multiple Play" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/script_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

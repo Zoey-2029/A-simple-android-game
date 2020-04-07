@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DrawActivity">
+
+    <edu.stanford.cs108.bunnyworld.DrawCanvas
+        android:id="@+id/draw_canvas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1" />
+
+    <View
+        android:id="@+id/horizontal_split_line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/draw_canvas"
+        android:layout_marginVertical="3sp"
+        android:background="@color/colorLightGray" />
+
+    <RelativeLayout
+        android:id="@+id/draw_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/horizontal_split_line"
+        android:layout_weight="2.7"
+        android:background="@color/button_text"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/color_panel"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:paddingLeft="5sp"
+                android:paddingBottom="5sp">
+
+                <LinearLayout
+                    android:id="@+id/rgb_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rgbText"
+                        android:layout_width="190sp"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/redLine"
+                        android:layout_weight="1"
+                        android:text="RGB:  (0, 0, 0)"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/colorView"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="15sp"
+                        android:layout_weight="1"
+                        android:background="#000000" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/redLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rgb_info"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="40sp"
+                        android:layout_height="wrap_content"
+                        android:text="Red" />
+
+                    <SeekBar
+                        android:id="@+id/redBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:progress="0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/greenLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/redLine"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="40sp"
+                        android:layout_height="wrap_content"
+                        android:text="Green" />
+
+                    <SeekBar
+                        android:id="@+id/greenBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:progress="0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/blueLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/greenLine"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="40sp"
+                        android:layout_height="wrap_content"
+                        android:text="Blue" />
+
+                    <SeekBar
+                        android:id="@+id/blueBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:progress="0" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/width_panel"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/color_panel"
+                android:layout_weight="1.2"
+                android:paddingLeft="10sp">
+
+                <LinearLayout
+                    android:id="@+id/widthLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/width_tv"
+                        android:layout_width="100sp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Width: 15"
+                        android:textSize="20sp" />
+
+                    <SeekBar
+                        android:id="@+id/widthBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="-15sp"
+                        android:max="100"
+                        android:progress="15" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/radio_btns"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/widthLine"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/pen_radio_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@drawable/pencil_btn"
+                        android:checked="true"
+                        android:text="Pen"
+                        android:textAlignment="center"
+                        android:textSize="25sp" />
+
+                    <RadioButton
+                        android:id="@+id/eraser_radio_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@drawable/erase_btn"
+                        android:text="Eraser"
+                        android:textAlignment="center"
+                        android:textSize="25sp" />
+
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/operation_panel"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/save_clear_panel"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="0sp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:onClick="undoDraw"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/shape_back"
+                    android:tooltipText="Undo Drawing" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="0sp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:onClick="redoDraw"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/shape_next"
+                    android:tooltipText="Redo Drawing" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/save_clear_panel"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10sp"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    android:layout_weight="1"
+                    android:onClick="saveDraw"
+                    android:text="Save"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    android:layout_weight="1"
+                    android:onClick="clearDraw"
+                    android:text="Clear"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
